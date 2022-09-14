@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+class="is-smooth-scoll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth"
+>
 
 <head>
     <meta charset="UTF-8">
@@ -7,25 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de jean scratch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/locomotive-scroll/dist/locomotive-scroll.min.css">
 </head>
 
-<body>
-    <header>
+<body >
+    <div data-scroll-container>
+    <header data-scroll>
         <div class="links">
-            <a href="#portfolio">portfolio</a>
+            <a href="#portfolio" data-scroll-to >portfolio</a>
             <a href="#mailto:jeanscratch@gmail.com">contact</a>
         </div>
-        <div class="wrapper">
-            <div class="appear" id="h1-wrapper">
+        <div  class="wrapper">
+            <div data-scroll class="appear" id="h1-wrapper">
                 <h1>Jean Scratch</h1>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="appear" id="h2-1">
-                <h2>Développeur</h2>
+        <div data-scroll data-scroll-repeat="true" class="wrapper" id="color">
+            <div data-scroll class="appear" id="h2-1">
+                <h2 >Développeur</h2>
             </div>
         </div>
-        <div class="wrapper">
+        <div data-scroll class="wrapper">
             <div class="appear" id="h2-2">
                 <h2>Front-end</h2>
             </div>
@@ -133,12 +137,12 @@
     <footer>
         <div class="wrapper">
             <div class="appear">
-                <p>Vous avez un projet</p>
+                <p>Vous avez un projet ?</p>
             </div>
         </div>
         <div class="wrapper">
             <div class="appear" id="l2">
-                <p>Je serai ravid'en <a href="mailto:jeanscratch@gmail.com">discuter</a></p>
+                <p>Je serai ravi d'en <a href="mailto:jeanscratch@gmail.com">discuter</a></p>
             </div>
         </div>
         <div class="wrapper">
@@ -150,9 +154,12 @@
         <div class="img img2"></div>
        </div>
     </footer>
+</div>
 
+    <script src="node_modules/locomotive-scroll/dist/locomotive-scroll.min.js  "></script>
+    <script src="js/index.js"></script>
 
-    <script src="script.js"></script>
 </body>
+
 
 </html>
